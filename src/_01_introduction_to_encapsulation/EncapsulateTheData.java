@@ -36,12 +36,18 @@ public class EncapsulateTheData {
 		EncapsulateTheData etd = new EncapsulateTheData();
 		etd.setItemsReceived(5);
 	}
-	   @Test
+	   @SuppressWarnings("deprecation")
+	@Test
 	    public void testGetters() {
 	  
 
 	        // assert statements
+		   setItemsReceived(5);
 	        assertEquals(getItemsReceived(), 5);
+	        setDegreesTurned(37);
+	        assertEquals(getDegreesTurned(), 37.0, 1);
+	        setNomenClature("Hello");
+	        assertEquals(getNomenClature(), "Hello");
 	        
 	    }
 	public void setItemsReceived(int i) {
@@ -57,6 +63,7 @@ public class EncapsulateTheData {
 		if (j > 360.0) {
 			j = 360;
 		}
+		
 		degreesTurned = j;
 	}
 	public void setNomenClature(String s) {
