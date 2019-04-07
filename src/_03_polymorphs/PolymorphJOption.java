@@ -14,7 +14,9 @@ public class PolymorphJOption extends Polymorph {
 
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.MAGENTA);
+		//System.out.println("pX " + getX());
+		//System.out.println("pY " + getY());
+		g.setColor(Color.BLACK);
 		g.fillRect(getX(), getY(), 50, 50);
 	}
 

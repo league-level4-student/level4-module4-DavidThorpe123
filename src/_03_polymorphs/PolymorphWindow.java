@@ -97,11 +97,15 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseMoti
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
+		System.out.println("X " + e.getX());
+		System.out.println("Y " + e.getY());
+		
 		System.out.println("df");
 		for (Polymorph p : pm) {
 			if (p instanceof PolymorphJOption) {
 				if (e.getX() > p.getX() && e.getX() < p.getX() + 50 && e.getY() > p.getY()
-						&& e.getY() < p.getY() - 50) {
+						&& e.getY() < p.getY() + 50) {
+					System.out.println("sdf");
 					JOptionPane.showMessageDialog(null, "Hello");
 				}
 			}
